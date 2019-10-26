@@ -23,8 +23,8 @@
    }
    else
    {            // 레코드 삽입 명령을 $sql에 입력
-	    $sql = "insert into member(id, pass, name, nick, hp, email, regist_day, level) ";
-		$sql .= "values('$id', '$pass', '$name', '$nick', '$hp', '$email', '$regist_day', 9)";
+	    $sql = "insert into member(id, pass, name, nick, hp, email, ele, mid, hi, regist_day, level) ";
+		$sql .= "values('$id', '$pass', '$name', '$nick', '$hp', '$email','$ele','$mid','$hi', '$regist_day', 9)";
 
 		mysql_query($sql, $connect);
    }

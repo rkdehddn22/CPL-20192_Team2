@@ -122,10 +122,10 @@
 								<option value='018'>018</option>
 								<option value='019'>019</option>
 							</select> - <input type="text" class="hp" name="hp2"> - <input type="text" class="hp" name="hp3"></li>
-						<li>E-mail<input type="text" id="email1" name="email1"> @ <input type="text" name="email2"></li>
-						<li>초등학교<input type="text" name=""></li>
-						<li>중학교<input type="text" name=""></li>
-						<li>고등학교<input type="text" name=""></li>
+						<li>*E-mail<input type="text" id="email1" name="email1"> @ <input type="text" name="email2"></li>
+						<li>초등학교<input type="text" name="ele"></li>
+						<li>중학교<input type="text" name="mid"></li>
+						<li>고등학교<input type="text" name="hi"></li>
 					</ul>
 				</div>
 				<div class="clear"></div>
