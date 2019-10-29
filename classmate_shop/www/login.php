@@ -60,7 +60,7 @@
         if ($row != null) {                                                 //만약 배열에 존재한다면
             $_SESSION['ses_username'] = $row['name'];                           // 세션을 만들어준다.
             echo $_SESSION['ses_username'].'님 안녕하세요<p/>';                   // name님 안녕하세요.
-            echo '<a href="./index.php">로그아웃 하기</a>';           //로그아웃 페이지 링크.
+            echo '<a href="./index.html">로그아웃 하기</a>';           //로그아웃 페이지 링크.
         }
 
         if($row == null){                                                    //만약 배열에 아무것도 없다면
