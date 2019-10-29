@@ -38,13 +38,21 @@
       <!-- 가게 검색  -->
       <div class= "form-group">
         <div class="searching">
+          <div>지역</div>
+          <input
+          <p></p>
           <div>가게검색</div>
           <input type="text" placeholder="가게 검색">
           <button>검색</button>
         </div>
       </div>
       <!-- 학교 검색  -->
-      <div>
+      <div class="schoolsearchbox">
+        <input onkeyup="filter()" type="text" id="value" placeholder="학교검색">
+      </div>
+      <div class="container">
+        <div class="school"> </div>
+
         <div>학교 검색</div>
         <input type="text" placeholder="학교 검색">
         <button>검색</button>
