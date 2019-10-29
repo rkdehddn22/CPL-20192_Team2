@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <link rel="stylesheet" type="text/css" href="css/search_shop.css" />
+
+  <link rel="stylesheet" type="text/css" href="css/search_shop_add.css" />
+
   <head>
     <meta charset="utf-8">
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/search_shop.js"></script>
-    <title>가게검색</title>
+    <script type="text/javascript" src="js/search_shop_add.js"></script>
+    <title>가게검색결과</title>
   </head>
   <body>
     <header>
@@ -30,13 +32,11 @@
       <div class="mm"><a href="my_group.html">내 모임</a></div>
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>
     </div>
-    <!-- 가게 검색 -->
+    <!-- 가게 검색 결과 -->
     <div class="wrap">
-      <h2>가게검색</h2>
-      <div class="search">
-        <input type="text" placeholder="가게명을 입력해주세요.">
-        <div class="search_button"><button onclick="location.href='search_shop_add.html';"><img src="img/search.png"></button></div>
-      </div>
+      <h2>가게검색결과</h2>
+      <div class="contentbox" style="margin-top:10px"></div>
+      <input type="button" name="" value="다른 가게 검색하기" style="margin-top:20px" onclick="location.href='search_shop.html';">
     </div>
   </body>
 </html>
