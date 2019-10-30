@@ -94,7 +94,7 @@
 	<div id="col2">
 		<form name="member_form" method="post" action="insert.php">
 			<div id="title">
-				<img src="img/title_join.gif">
+				<img src="../img/title_join.gif">
 			</div>
 
 			<div id="form_join">
@@ -102,7 +102,7 @@
 					<ul>
 						<li>
 							<div id="id1">*아이디<input type="text" name="id"></div>
-							<div id="id2"><a href="#"><img src="img/check_id.gif" onclick="check_id()"></a></div>
+							<div id="id2"><a href="#"><img src="../img/check_id.gif" onclick="check_id()"></a></div>
 							<div id="id3"></div>
 						</li>
 						<li>*비밀번호<input type="password" name="pass"></li>
@@ -110,7 +110,7 @@
 						<li>*이름<input type="text" name="name"></li>
 						<li>
 							<div id="nick1">*닉네임<input type="text" name="nick"></div>
-							<div id="nick2"><a href="#"><img src="img/check_id.gif" onclick="check_nick()"></a></div>
+							<div id="nick2"><a href="#"><img src="../img/check_id.gif" onclick="check_nick()"></a></div>
 						</li>
 						<li>*휴대폰<select class="hp" name="hp1">
 								<option value='010'>010</option>
@@ -130,8 +130,8 @@
 				<div id="must"> * 는 필수 입력항목입니다.</div>
 			</div>
 
-			<div id="button"><a href="#"><img src="img/button_save.gif" onclick="check_input()"></a>&nbsp;&nbsp;
-				<a href="#"><img src="img/button_reset.gif" onclick="reset_form()"></a>
+			<div id="button"><a href="#"><img src="../img/button_save.gif" onclick="check_input()"></a>&nbsp;&nbsp;
+				<a href="#"><img src="../img/button_reset.gif" onclick="reset_form()"></a>
 			</div>
 		</form>
 	</div>
