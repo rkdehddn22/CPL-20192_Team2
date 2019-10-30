@@ -33,7 +33,7 @@
       <span><a href="index.php">HOME</span>
       <div class="mm"><a href="search_shop.html">가게검색</a></div>
       <div class="mm"><a href="classmate_meeting.html">동창모임</a></div>
-      <div class="mm"><a href="meeting.html">모임생성&관리</a></div>
+      <div class="mm"><a href="meeting.php">모임생성&관리</a></div>
     </div>
     <!-- 오른쪽 메뉴 -->
     <div class="right_menu" style="display: none">
@@ -58,7 +58,7 @@
         $row = $res->fetch_array(MYSQLI_ASSOC); // 넘어온 결과를 한 행씩 패치해서 $row라는 배열에 담는다.
 
         if ($row != null) {                                                 //만약 배열에 존재한다면
-            $_SESSION['ses_username'] = $row['name'];                           // 세션을 만들어준다.
+            $_SESSION['name'] = $row['name'];                           // 세션을 만들어준다.
             echo $_SESSION['ses_username'].'님 안녕하세요<p/>';                   // name님 안녕하세요.
             echo '<a href="./index.html">로그아웃 하기</a>';           //로그아웃 페이지 링크.
         }

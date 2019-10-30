@@ -26,7 +26,16 @@
     <div class="right_menu" style="display: none">
       <div class="right_menu_x">X</div>
       <span>마이페이지</span>
-      <div class="mm"><a href="login.php">로그인</a></div>
+      <div id="jb-sidebar-right">
+        <h2>login</h2>
+            <form  method="post" action="login.php" > <!--post로 login.php로 로그인정보 보냄-->
+            ID : <input type="text" name="id" /><br />
+            PASSWORD : <input type="password" name="password" /><br />
+            <input type="submit" value="login"/>
+            <input type="button" name ="버튼" value="회원가입" onclick="location.href='http://rkdehddn22.iptime.org/CPL-20192_Team2/classmate_shop/www/sign_up.php'"
+;>
+           </form>
+</div>
       <div class="mm"><a href="information_modify.html">정보수정</a></div>
       <div class="mm"><a href="my_group.html">내 모임</a></div>
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>
