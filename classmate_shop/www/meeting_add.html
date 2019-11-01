@@ -13,16 +13,67 @@
 <!-- 검색창 스타일 -->
     <style>
     input{
-      border:3px solid gray;
+      border:3px solid #1AAB8A;
       border-radius :10px;
       height : 30px;
       width : calc(100%-40px);
       font-size : 13px;
+      text-align :center;
 
     } </style>
 
-
-
+    <!--- 버튼창 스타일 -->
+    <style>
+    .button{
+      background:#1AAB8A;
+      color:#fff;
+      border:none;
+      position:relative;
+      height:35px;
+      font-size:13px;
+      padding:10px;
+      font : center;
+      cursor:pointer;
+      transition:800ms ease all;
+      outline:none;
+    }
+    .button:hover{
+      background:#fff;
+      color:#1AAB8A;
+    }
+    .button:before,.button:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #1AAB8A;
+      transition:400ms ease all;
+    }
+    .button:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    .button:hover:before,.button:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }
+    </style>
+<!---전체 박스 형 --->
+<style>
+ #box{
+   width: calc(100%);
+   height: auto;
+   min-height: calc(100%);
+   padding: 20px;
+   margin: 0px;
+   background: #f4f4f4;
+  /* font-family : ; */
+ }
+</style>
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>
@@ -48,7 +99,7 @@
     <!-- 모임생성 -->
     <div class="wrap">
       <h2> 모임생성 </h2>   <!-- 제목 -->
-
+<div id="box">
       <div>지역 선택</div>    <!-- 지역 선택 --->
   <script type="text/javascript">
   $('document').ready(function() {
@@ -102,10 +153,11 @@
       <!-- 학교 검색  -->
         <div>학교 검색</div>
         <input type="text" placeholder="학교 검색" >
-        <button>검색</button>
+        <input class ="button" type ="button" name="button" value = 검색>
       <p></p>
 
       <!-- 날짜 검색  -->
+
       <div>
         <div class="date" style ="cursive">날짜 검색</div>
         <input type="date" name="Bd" >
@@ -113,49 +165,12 @@
 <p></p>
  <!-- 모임생성 가게검색 및 뒤로가기 로 보내기 -->
 
-<!--- 버튼창 스타일 -->
-<style>
-button{
-  background:#1AAB8A;
-  color:#fff;
-  border:none;
-  position:relative;
-  height:30px;
-  font-size:1.6em;
-  padding:0 2em;
-  cursor:pointer;
-  transition:800ms ease all;
-  outline:none;
-}
-button:hover{
-  background:#fff;
-  color:#1AAB8A;
-}
-button:before,button:after{
-  content:'';
-  position:absolute;
-  top:0;
-  right:0;
-  height:2px;
-  width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
-}
-button:after{
-  right:inherit;
-  top:inherit;
-  left:0;
-  bottom:0;
-}
-button:hover:before,button:hover:after{
-  width:100%;
-  transition:800ms ease all;
-}
-</style>
+
  <form>
       <input class="button" type="button" name="button" value="이어서" onclick="location.href='meeting_add_shop.html';"> <!-- 가게 검색 -->
       <input class="button" type="button" name="button" value="뒤로가기" onclick="location.href='meeting.html';">   <!-- 뒤로가기 -->
     </form>
   </div>
+</div>
   </body>
 </html>

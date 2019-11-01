@@ -9,6 +9,56 @@
   </head>
 
   <body>
+    <style>
+    input{
+      border:3px solid #1AAB8A;
+      border-radius :10px;
+      height : 30px;
+      width : calc(100%-40px);
+      font-size : 13px;
+      text-align :center;
+    } </style>
+    <!--- 버튼창 스타일 -->
+    <style>
+    .button{
+      background:#1AAB8A;
+      color:#fff;
+      border:none;
+      position:relative;
+      height:35px;
+      font-size:13px;
+      padding:10px;
+      font : center;
+      cursor:pointer;
+      transition:800ms ease all;
+      outline:none;
+    }
+    .button:hover{
+      background:#fff;
+      color:#1AAB8A;
+    }
+    .button:before,.button:after{
+      content:'';
+      position:absolute;
+      top:0;
+      right:0;
+      height:2px;
+      width:0;
+      background: #1AAB8A;
+      transition:400ms ease all;
+    }
+    .button:after{
+      right:inherit;
+      top:inherit;
+      left:0;
+      bottom:0;
+    }
+    .button:hover:before,.button:hover:after{
+      width:100%;
+      transition:800ms ease all;
+    }
+    </style>
+
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>
@@ -34,8 +84,7 @@
 
     <!-- 모임관리 & 생성 -->
     <div class="wrap">
-      <h3> 동기들의 가게</h3>
-
+      <h3> 동기가게 검색결과</h3>
       <div class="contentbox" style="margin-top:10px">
    </div>
      <div class="contentbox" style="margin-top:10px">
@@ -43,11 +92,9 @@
      <div class="contentbox" style="margin-top:10px">
      </div>
 
-<!---     모임생성했을 경우의 버튼
-      <input class="btn" type="button" name="" value="모임 생성" style="margin-top:40px" onclick="location.href='meeting_add.html';">
-    </div>
---->
 <p></p>
-<input class="btn" type ="button" name="" value ="뒤로 가기" onclick="location.href='meeting_add.html';">
+
+<input class="button" type ="button" name="button" value ="생성 완료">
+<input class="button" type ="button" name="button" value ="뒤로 가기" onclick="location.href='meeting_add.html';">
 
 </body>
