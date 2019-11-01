@@ -9,6 +9,20 @@
   </head>
 
   <body>
+
+<!-- 검색창 스타일 -->
+    <style>
+    input{
+      border:3px solid gray;
+      border-radius :10px;
+      height : 30px;
+      width : calc(100%-40px);
+      font-size : 13px;
+
+    } </style>
+
+
+
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>
@@ -87,20 +101,60 @@
 
       <!-- 학교 검색  -->
         <div>학교 검색</div>
-        <input type="text" placeholder="학교 검색">
+        <input type="text" placeholder="학교 검색" >
         <button>검색</button>
       <p></p>
 
       <!-- 날짜 검색  -->
       <div>
-        <div>날짜 검색</div>
+        <div class="date" style ="cursive">날짜 검색</div>
         <input type="date" name="Bd" >
       </div>
 <p></p>
  <!-- 모임생성 가게검색 및 뒤로가기 로 보내기 -->
+
+<!--- 버튼창 스타일 -->
+<style>
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:30px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  transition:800ms ease all;
+  outline:none;
+}
+button:hover{
+  background:#fff;
+  color:#1AAB8A;
+}
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #1AAB8A;
+  transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+</style>
  <form>
-      <input class="btn" type="button" name="" value="이어서" onclick="location.href='meeting_add_shop.html';"> <!-- 가게 검색 -->
-      <input class="btn" type="button" name="" value="뒤로가기" onclick="location.href='meeting.html';">   <!-- 뒤로가기 -->
+      <input class="button" type="button" name="button" value="이어서" onclick="location.href='meeting_add_shop.html';"> <!-- 가게 검색 -->
+      <input class="button" type="button" name="button" value="뒤로가기" onclick="location.href='meeting.html';">   <!-- 뒤로가기 -->
     </form>
   </div>
   </body>
