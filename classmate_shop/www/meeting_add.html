@@ -19,61 +19,55 @@
       width : calc(100%-40px);
       font-size : 13px;
       text-align :center;
-
-    } </style>
-
-    <!--- 버튼창 스타일 -->
-    <style>
-    .button{
-      background:#1AAB8A;
-      color:#fff;
-      border:none;
-      position:relative;
-      height:35px;
-      font-size:13px;
-      padding:10px;
-      font : center;
-      cursor:pointer;
-      transition:800ms ease all;
-      outline:none;
-    }
-    .button:hover{
-      background:#fff;
-      color:#1AAB8A;
-    }
-    .button:before,.button:after{
-      content:'';
-      position:absolute;
-      top:0;
-      right:0;
-      height:2px;
-      width:0;
-      background: #1AAB8A;
-      transition:400ms ease all;
-    }
-    .button:after{
-      right:inherit;
-      top:inherit;
-      left:0;
-      bottom:0;
-    }
-    .button:hover:before,.button:hover:after{
-      width:100%;
-      transition:800ms ease all;
-    }
-    </style>
-<!---전체 박스 형 --->
-<style>
- #box{
-   width: calc(100%);
-   height: auto;
-   min-height: calc(100%);
-   padding: 20px;
-   margin: 0px;
-   background: #f4f4f4;
-  /* font-family : ; */
- }
+}
+      .button{
+        background:#1AAB8A;
+        color:#fff;
+        border:none;
+        position:relative;
+        height:35px;
+        font-size:13px;
+        padding:10px;
+        font : center;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;
+      }
+      .button:hover{
+        background:#fff;
+        color:#1AAB8A;
+      }
+      .button:before,.button:after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: #1AAB8A;
+        transition:400ms ease all;
+      }
+      .button:after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+      }
+      .button:hover:before,.button:hover:after{
+        width:100%;
+        transition:800ms ease all;
+      }
+      #box{
+        width: calc(100%);
+        height: auto;
+        min-height: calc(100%);
+        padding: 20px;
+        margin: 0px;
+        background: #f4f4f4;
+       /* font-family : ; */
+      }
 </style>
+
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>

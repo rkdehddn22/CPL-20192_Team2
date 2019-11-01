@@ -32,5 +32,111 @@
       <div class="mm"><a href="my_group.html">내 모임</a></div>
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>
     </div>
+
+    <style>
+     #box{
+       width: calc(100%-10px);
+       height: auto;
+       min-height: calc(100%);
+       padding: 20px;
+       margin: 50px;
+       background: #f4f4f4;
+      /* font-family : ; */
+     }
+#content{
+  width: 100%;
+  height: auto;
+  margin:1px;
+  border:2px solid #1AAB8A;
+  border-radius :5px;
+}
+
+.eventlist{
+  width : auto;
+  height: auto;
+  margin:1px;
+  border:2px solid #1AAB8A;
+  border-radius :5px;
+  text-align: center;
+}
+
+  .button{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:35px;
+    font-size:13px;
+    padding:10px;
+    font : center;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+  }
+  .button:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  .button:before,.button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  .button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .button:hover:before,.button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+}
+     </style>
+
+<div id="box">
+   <form action="shop_register.php" method="post">
+     <h2> 가게 등록 </h2>
+     <div> 분야
+     <select name = mm>
+       <option value =1 selected> 음식점
+        <option value =2 selected> 카페
+          <option value =3 selected> 생필품
+            <option value =4 selected> 옷
+              <option value =5 selected> 기타
+              </select>
+            </div>
+     <p>
+       <th> 가게이름 </th>
+       <td><input type ="text" class = "eventlist" name="shopname" placeholder="가게이름"></td>
+     </p>
+
+     <p>
+       <div> 사진 등록 </div>
+       <td><input type ="image" class ="image" name="shopimage" ></td>
+            <td><input type ="image" class ="image" name="shopimage" ></td>
+                 <td><input type ="image" class ="image" name="shopimage" ></td>
+     </p>
+
+     <div> 가게소개 </div>
+     <td><textarea col="40" rows="10" id="content" name="content" placeholder="가게를 소개해 주세요"></textarea></td>
+     <p></p>
+
+     <div> 동기들을 위한 이벤트</div>
+     <div>할인률: <input type="text" class = "eventlist" name="event" placeholder="00%" ></div>
+      <div>서비스: <input type="text" class = "eventlist" name="event" placeholder="사리 추가"></div>
+        <div>기 타: <input type="text" class = "eventlist" name="event" placeholder="etc"></div>
+<p></p>
+
+  <button class="button" input type="submit"> 가게 저장 </button>
+  <input class="button" type ="button" name="button" value ="뒤로 가기" onclick="location.href='index.html';" >
+</form>
+</div>
   </body>
 </html>
