@@ -1,12 +1,6 @@
 <meta charset="utf-8">
 <?
-   $hp = $hp1."-".$hp2."-".$hp3;
-   $email = $email1."@".$email2;
-
-   $regist_day = date("Y-m-d (H:i)");
-   $ip = $REMOTE_ADDR;
-
-   include "dbconn.php";
+   include "../lib/dbconn.php";
 
    $sql = "select * from member where id='$id'";
    $result = mysql_query($sql, $connect);
@@ -25,14 +19,14 @@
    {            // 레코드 삽입 명령을 $sql에 입력
 	    $sql = "insert into member(id, pass, name, nick, hp, email, ele, mid, hi, regist_day, level) ";
 		$sql .= "values('$id', '$pass', '$name', '$nick', '$hp', '$email','$ele','$mid','$hi', '$regist_day', 9)";
-
+    mysql_query("set names utf8",$connect);
 		mysql_query($sql, $connect);
    }
 
    mysql_close();
    echo "
 	   <script>
-	    location.href = 'index.php';
+	    location.href = '../index.html';
 	   </script>
 	";
 ?>

@@ -18,6 +18,12 @@
 </head>
 
 <body>
+  <?
+  include ("./lib/db_connect.php");
+  $connect= dbconn();
+  $member= member();
+  ?>
+
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>
@@ -35,16 +41,19 @@
     <div class="right_menu" style="display: none">
       <div class="right_menu_x">X</div>
       <span>마이페이지</span>
-      <div id="jb-sidebar-right">
-        <h2>login</h2>
-            <form  method="post" action="login.php" > <!--post로 login.php로 로그인정보 보냄-->
-            ID : <input type="text" name="id" /><br />
-            PASSWORD : <input type="password" name="password" /><br />
-            <input type="submit" value="login"/>
-            <input type="button" name ="버튼" value="회원가입" onclick="location.href='http://rkdehddn22.iptime.org/CPL-20192_Team2/classmate_shop/www/member/sign_up.php'"
-;>
-           </form>
-</div>
+      <td width='100%' height='50' align='right'>
+      <?if($member[user_id]){
+      echo $member[name]."(".$member[user_id].") 님 환영합니다.";
+      }else{?>
+          <a href="./member/login.php"><strong>[로그인]</strong></a>
+      &nbsp; &nbsp; &nbsp;
+      <a href="./member/join.php"><strong>[회원가입]</strong></a>
+      <?}?>
+      &nbsp; &nbsp;
+      <?if($member[user_id]){?>
+      <a href="./member/logout.php"><strong>[로그아웃]</strong></a>
+      <?}?>
+      </td>
       <div class="mm"><a href="information_modify.html">정보수정</a></div>
       <div class="mm"><a href="my_group.html">내 모임</a></div>
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>

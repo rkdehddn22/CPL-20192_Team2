@@ -6,7 +6,7 @@
    }
    else
    {
-      include "dbconn.php";
+      include "../dbconn.php";
 
       $sql = "select * from member where id='$id' ";
 
