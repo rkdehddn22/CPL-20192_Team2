@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko" dir="ltr">
-<link rel="stylesheet" type="text/css" href="css/login.css" />
+<link rel="stylesheet" type="text/css" href="../css/login.css" />
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/login.js"></script>
     <title>로그인</title>
   </head>
 
   <body>
+    <?
+    include ("../lib/db_connect.php");
+    $connect= dbconn();
+    $member= member();
+    ?>
     <header>
       <div class="toggle"><img src="../img/toggle.png" ></div>
       <div class="logo"><img src="../img/people.png"></div>
@@ -29,24 +34,39 @@
     <div class="right_menu" style="display: none">
       <div class="right_menu_x">X</div>
       <span>마이페이지</span>
-      <div class="mm"><a href="login.html">로그인</a></div>
+      <td width='100%' height='50' align='right'>
+      <?if($member[user_id]){
+      echo $member[name]."(".$member[user_id].") 님 환영합니다.";
+      }else{?>
+          <a href="../member/login.php"><strong>[로그인]</strong></a>
+      &nbsp; &nbsp; &nbsp;
+      <a href="../member/join.php"><strong>[회원가입]</strong></a>
+      <?}?>
+      &nbsp; &nbsp;
+      <?if($member[user_id]){?>
+      <a href="./member/logout.php"><strong>[로그아웃]</strong></a>
+      <?}?>
+
+      </td>
       <div class="mm"><a href="information_modify.html">정보수정</a></div>
       <div class="mm"><a href="my_group.html">내 모임</a></div>
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>
     </div>
     <!-- 로그인 창 -->
-    <tr>
+  <div class="login_box">
+    <h1>로그인</h1>
     <form action='./login_post.php' name='login' method='POST'>
-
-    <td width='100%' height='200' align='left'>
-    <li>아이디 &nbsp; : <input type='text' name='user_id' size='10'>
-    <br>
-    <li>비밀번호: <input type='password' name='pw' size='15'>
-    </td>
-<br>
+      <div class="text_box">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder='Username' name='user_id' value="">
+      </div>
+      <div class="text_box">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder='password' name='pw'value="">
+      </div>
     <tr>
     <td width='100%' heigh'30' align='center'>
-    <input type='submit' value='전송'>
+    <input class="btn_in "type='submit' value='전송'>
     </td>
     </form>
     </div>
