@@ -8,10 +8,10 @@ include "dbconn.php";
     $sql = $sql."values('$type', '$shopId', '$pic', '$content', '$event')";
 
     if($mysqli->query($sql)){
-        echo "<script>alert('가게 등록이 완료되었습니다'); location.href='shop_registration';</script>";
+        echo "<script>alert('가게 등록이 완료되었습니다'); location.href='index.html';</script>";
 ​
     }else{
-        echo "<script>alert('등록이 실패하였습니다.');location.href='shop_registration';</script>";
+        echo "<script>alert('등록이 실패하였습니다.');location.href='index.html';</script>";
     }
   }
 
