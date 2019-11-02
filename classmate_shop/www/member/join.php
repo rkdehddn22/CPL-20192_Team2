@@ -30,12 +30,18 @@
 <li>닉네임: <input type='text' name='nick_name' size='10'>
 <br><br>
 <li>생년월일: <input type='text' name='birth' size='10'>
-  <br><br>
+<br><br>
 <li>성별: <input type='radio' name='sex' value="male">남자&nbsp; &nbsp;  <input type='radio' name='sex' value="female">여자
 <br><br>
-<li>연락처: <input type='text' name='tel' size='10'>
-  <br><br>
-  <li>이메일 <input type='text' name='email' size='10'>
+<li>*휴대폰<select class="tel" name="hp1">
+    <option value='010'>010</option>
+    <option value='011'>011</option>
+    <option value='016'>016</option>
+    <option value='017'>017</option>
+    <option value='018'>018</ option>
+    <option value='019'>019</option>
+  </select> - <input type="text" class="tel" name="hp2"> - <input type="text" class="tel" name="hp3"></li><br><br>
+<li>이메일 <input type='text' name='email' size='10'>
 <br><br>
 <li>초등학교: <input type='text' name='addr_1' size='15'>
   <br><br>

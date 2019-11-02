@@ -1,5 +1,6 @@
+@@ -1,55 +0,0 @@
 <!DOCTYPE html>
-<html lang="ko" dir="ltr">
+<html lang="en" dir="ltr">
 <link rel="stylesheet" type="text/css" href="css/login.css" />
   <head>
     <meta charset="utf-8">
@@ -12,8 +13,8 @@
 
   <body>
     <header>
-      <div class="toggle"><img src="../img/toggle.png" ></div>
-      <div class="logo"><img src="../img/people.png"></div>
+      <div class="toggle"><img src="img/toggle.png" ></div>
+      <div class="logo"><img src="img/people.png"></div>
       <div class="title">내 동기가 하는 가게</div>
     </header>
 
@@ -35,20 +36,21 @@
       <div class="mm"><a href="shop_registration.html">가게등록</a></div>
     </div>
     <!-- 로그인 창 -->
-    <tr>
-    <form action='./login_post.php' name='login' method='POST'>
+    <div class="login_box">
+      <h1>로그인</h1>
+      <div class="text_box">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" name="" value="">
+      </div>
 
-    <td width='100%' height='200' align='left'>
-    <li>아이디 &nbsp; : <input type='text' name='user_id' size='10'>
-    <br>
-    <li>비밀번호: <input type='password' name='pw' size='15'>
-    </td>
-<br>
-    <tr>
-    <td width='100%' heigh'30' align='center'>
-    <input type='submit' value='전송'>
-    </td>
-    </form>
+      <div class="text_box">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="password" name="" value="">
+      </div>
+
+      <input class="btn_in" type="button" name="" value="로그인">
+      <input class="btn_up" type="button" name="" value="회원가입" onclick="location.href='sign_up.php';">
+
     </div>
   </body>
 </html>
