@@ -21,19 +21,29 @@
 	 <p><strong>&nbsp; &nbsp;[ 회 원 가 입  ]</strong></p> <br>
 
 <input type='hidden' name='id' value='test'>
+<li>이름: <input type='text' name='name' size='10'>
+<br><br>
 <li>회원아이디: <input type='text' name='user_id' size='10'>
-<br><br>
-<li>이름: <input type='text' name='name' size='10'> &nbsp; &nbsp; &nbsp; ●닉네임: <input type='text' name='nick_name' size='10'>
-<br><br>
-<li>생년월일: <input type='text' name='birth' size='10'> &nbsp; &nbsp; &nbsp;
-    ●성별: <input type='radio' name='sex' value="male">남자&nbsp; &nbsp;  <input type='radio' name='sex' value="female">여자
-<br><br>
-<li>연락처: <input type='text' name='tel' size='10'> &nbsp; &nbsp; ●이메일 <input type='text' name='email' size='10'>
 <br><br>
 <li>비밀번호: <input type='password' name='pw' size='10'>
 <br><br>
-<li>주소: <input type='text' name='addr_1' size='15'>&nbsp; &nbsp; ●상세주소<input type='text' name='addr_2' size='15'>
+<li>닉네임: <input type='text' name='nick_name' size='10'>
 <br><br>
+<li>생년월일: <input type='text' name='birth' size='10'>
+  <br><br>
+<li>성별: <input type='radio' name='sex' value="male">남자&nbsp; &nbsp;  <input type='radio' name='sex' value="female">여자
+<br><br>
+<li>연락처: <input type='text' name='tel' size='10'>
+  <br><br>
+  <li>이메일 <input type='text' name='email' size='10'>
+<br><br>
+<li>초등학교: <input type='text' name='addr_1' size='15'>
+  <br><br>
+<li>중학교: <input type='text' name='addr_2' size='15'>
+<br><br>
+<li>고등학교: <input type='text' name='addr_3' size='15'>
+<br><br>
+
 <input type='submit' value='가입하기'>
 	 </td>
 	 </form>
