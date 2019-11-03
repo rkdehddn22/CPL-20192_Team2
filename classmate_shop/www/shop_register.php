@@ -1,6 +1,6 @@
-<?php
-​
-include "dbconn.php";
+<meta charset="utf-8">
+<?
+   include "../lib/dbconn.php";
 ​
   if($userId != null)
   {
