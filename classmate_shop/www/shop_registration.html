@@ -116,7 +116,11 @@
   }
 }
      </style>
-
+     <?
+     include ("../lib/db_connect.php");
+     $connect= dbconn();
+     $shop= shop();
+     ?>
 <div id="box">
    <form action="shop_register.php" method="post">
      <h2> 가게 등록 </h2>
