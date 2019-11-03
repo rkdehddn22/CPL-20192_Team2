@@ -2,7 +2,7 @@
 <?
    include "../lib/dbconn.php";
 ​
-  if($userId != null)
+  if($shopId != null)
   {
     $sql = "insert into store (type,shopId,address, content, event)";
     $sql = $sql."values('$type', '$shopId', ,'$address', '$content', '$event')";
