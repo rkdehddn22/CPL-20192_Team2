@@ -9,12 +9,15 @@
     <script type="text/javascript" src="js/shop_registration.js"></script>
     <title>가게등록</title>
   </head>
+
   <body>
+    
     <?
-    include ("./lib/db_connect.php");
-    $connect= dbconn();
-    $member= member();
+    include ("../lib/db_connect.php");
+    $connect=dbconn();
+    $shop=shop();
     ?>
+
     <header>
       <div class="toggle"><img src="img/toggle.png" ></div>
       <div class="logo"><img src="img/people.png"></div>
@@ -116,13 +119,15 @@
   }
 }
      </style>
+
      <?
      include ("../lib/db_connect.php");
      $connect= dbconn();
      $shop= shop();
      ?>
+
 <div id="box">
-   <form action="shop_register.php" method="post">
+   <form action="shop_register.php" name="shop" method="post">
      <h2> 가게 등록 </h2>
      <div> 분야
      <select name = mm>
