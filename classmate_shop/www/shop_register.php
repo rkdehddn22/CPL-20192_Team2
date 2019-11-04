@@ -1,6 +1,6 @@
 <?header("content-type:text/html; charset=UTF-8");
 
-   include '../lib/db_connect.php';
+   include './lib/db_connect.php';
    $connect=dbconn();
 
 $type=$_POST[type];
@@ -27,5 +27,5 @@ mysql_close; //mysql끝내기
 
 <script>
 window. alert('가게 등록이 완료되었습니다.');
-location.href='../index.php';
+location.href='index.php';
 </script>
