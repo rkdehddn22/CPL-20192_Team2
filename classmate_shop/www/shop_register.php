@@ -1,13 +1,4 @@
 <?header("content-type:text/html; charset=UTF-8");
-/**************************************************************
-***************************************************************
-PHP Script Produced by: 박정원 PJW(Jimmy)
-Email: pjws0321@naver.com / pjws0321@gmail.com
-The purpose of the product : Educational (교육용)
-Notice: 본 스크립트는 교육용도로 만들어 졌습니다.
-Blog  http://blog.naver.com/pjws0321
-****************************************************************
-***************************************************************/
 
    include '../lib/db_connect.php';
    $connect=dbconn();
@@ -18,8 +9,6 @@ $address=$_POST[address];
 $content=$_POST[content];
 $event=$_POST[event];
 
-$regdate=date("YmdHis", time()); //날짜 시간
-$ip=getenv("REMOTE_ADDR"); //ip
 
 $query="insert into shop(type, shopId, address, content, event)
 values('$type', '$shopId', '$address', '$content', '$event')";
