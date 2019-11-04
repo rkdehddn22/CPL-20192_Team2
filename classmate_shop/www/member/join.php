@@ -73,11 +73,11 @@
 <br><br>
 <li>이메일: <input type='text' name='email' size='10'>
 <br><br>
-<li>초등학교: <input type='text' name='addr_1' size='15'>
+<li>초등학교: <input type='text' name='sch_1' size='15'>
   <br><br>
-<li>중학교: <input type='text' name='addr_2' size='15'>
+<li>중학교: <input type='text' name='sch_2' size='15'>
 <br><br>
-<li>고등학교: <input type='text' name='addr_3' size='15'>
+<li>고등학교: <input type='text' name='sch_3' size='15'>
 <br><br>
 
 <input type='submit' value='가입하기'>
