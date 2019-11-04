@@ -116,7 +116,7 @@
      </style>
 
 <div id="box">
-   <form action="shop_register.php" name="shop1" method="post">
+   <form action="shop_register.php" name="shop" method="post">
      <h2> 가게 등록 </h2>
      <div> 분야
      <select name = type>
@@ -133,6 +133,7 @@
      </p>
 <p>
   <div> 주소 </div>
+<!--
   <td>
     <input type="text" id="sample4_postcode" placeholder="우편번호">
     <input type="button" onclick="sample4_execDaumPostcode()" value="우편번호 찾기"><br>
@@ -141,6 +142,15 @@
     <span id="guide" style="color:#999;display:none"></span>
     <input type="text" id="sample4_detailAddress" placeholder="상세주소">
     <input type="text" id="sample4_extraAddress" placeholder="참고항목">
+
+    new daum.Postcode({
+    oncomplete: function(data) {
+    $('[name=zip]').val(data.zonecode); // 우편번호 (5자리)
+    $('[name=addr1]').val(data.address);
+    $('[name=addr2]').val(data.buildingName);
+        //data는 사용자가 선택한 주소 정보를 담고 있는 객체이며, 상세 설명은 아래 목록에서 확인하실 수 있습니다.
+    }
+  });
 
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script>
@@ -199,12 +209,35 @@
             }
         }).open();
     }
-    new daum.Postcode({
-    oncomplete: function(data) {
-        //data는 사용자가 선택한 주소 정보를 담고 있는 객체이며, 상세 설명은 아래 목록에서 확인하실 수 있습니다.
-    }
-});
+
 </script><td>
+-->
+
+
+<!-- 예제 시작 -->
+<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+
+우편번호 : <input type="text" name="zip" style="width:80px; height:26px;" />
+<button type="button" style="width:60px; height:32px;" onclick="openZipSearch()">검색</button><br>
+주소 : <input type="text" name="addr1" style="width:300px; height:30px;" readonly /><br>
+상세 : <input type="text" name="addr2" style="width:300px; height:30px;" />
+
+<script>
+
+function openZipSearch() {
+	new daum.Postcode({
+		oncomplete: function(data) {
+			$('[name=zip]').val(data.zonecode); // 우편번호 (5자리)
+			$('[name=addr1]').val(data.address);
+			$('[name=addr2]').val(data.buildingName);
+		}
+	}).open();
+}
+
+</script>
+<!-- 예제 종료 -->
+
+
 
 
      <p>
