@@ -5,13 +5,21 @@
 
 $type=$_POST[type];
 $shopId=$_POST[shopId];
-$address=$_POST[address];
+$postcode=$_POST[postcode];
+$road=$_POST[road];
+$jibun=$_POST[jibun];
+$detail=$_POST[detail];
+$extra=$_POST[extra];
 $content=$_POST[content];
-$event=$_POST[event];
+$event1=$_POST[event1];
+$event3=$_POST[event2];
+$event3=$_POST[event3];
 
+$regdate=date("YmdHis", time()); //날짜 시간
+$ip=getenv("REMOTE_ADDR"); //ip
 
-$query="insert into shop(type, shopId, address, content, event)
-values('$type', '$shopId', '$address', '$content', '$event')";
+$query="insert into shop1(type, shopId, postcode, road, jibun, detail, extra, content, event1, event2, event3)
+values('$type', '$shopId', '$postcode' ,'$road', '$jibun','$detail', '$extra', '$content', '$event1','$event2','$event3')";
 mysql_query("set names utf8",$connect);
 mysql_query($query,$connect);
 mysql_close; //mysql끝내기
