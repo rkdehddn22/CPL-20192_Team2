@@ -5,6 +5,7 @@
 
 $type=$_POST[type];
 $shopId=$_POST[shopId];
+
 /*
 $sample4_postcode=$_POST[sample4_postcode];
 $sample4_roadAddress=$_POST[sample4_roadAddress];
@@ -30,7 +31,7 @@ values('$type', '$shopId', '$sample4_postcode' ,'$sample4_roadAddress', '$sample
 */
 
 $query="insert into shop(type, shopId,zip,addr1,addr2,content, event1, event2, event3)
-values('$type', '$shopId',,'$zip','$addr1','$addr2', '$content', '$event1','$event2','$event3')";
+values('$type', '$shopId','$zip','$addr1','$addr2', '$content', '$event1','$event2','$event3')";
 mysql_query("set names utf8",$connect);
 mysql_query($query,$connect);
 mysql_close; //mysql끝내기
