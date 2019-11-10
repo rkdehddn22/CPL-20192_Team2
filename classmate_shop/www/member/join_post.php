@@ -10,6 +10,9 @@ $birth=$_POST[birth];
 $sex=$_POST[sex];
 $tel=$_POST[tel];
 $email=$_POST[email];
+$zip=$_POST[zip];
+$zip=$_POST[addr1];
+$zip=$_POST[addr2];
 $pws=$_POST[pw];
 $sch_1=$_POST[sch_1];
 $sch_2=$_POST[sch_2];
@@ -19,8 +22,8 @@ $pw=md5($pws);  //비밀번호 암호화
 $regdate=date("YmdHis", time()); //날짜 시간
 $ip=getenv("REMOTE_ADDR"); //ip
 
-$query="insert into member(id, user_id, name, nick_name, birth, sex, tel, email, pw, sch_1, sch_2, sch_3, regdate, ip)
-values('$id', '$user_id', '$name', '$nick_name', '$birth', '$sex', '$tel', '$email', '$pw', '$sch_1', '$sch_2', '$sch_3', '$regdate', '$ip')";
+$query="insert into member(id, user_id, name, nick_name, birth, sex, tel, email,zip,addr1,addr2, pw, sch_1, sch_2, sch_3, regdate, ip)
+values('$id', '$user_id', '$name', '$nick_name', '$birth', '$sex', '$tel', '$email', '$zip','$addr1','$addr2','$pw', '$sch_1', '$sch_2', '$sch_3', '$regdate', '$ip')";
 mysql_query("set names utf8",$connect);
 mysql_query($query,$connect);
 mysql_close; //mysql끝내기

@@ -41,17 +41,17 @@
     <div class="right_menu" style="display: none">
       <div class="right_menu_x">X</div>
       <span>마이페이지</span>
-      <td width='100%' height='50' align='right'>
+      <td>
       <?if($member[user_id]){
-      echo $member[name]."(".$member[user_id].") 님 환영합니다.";
+      echo    $member[nick_name]." 님 환영합니다.";
       }else{?>
-          <a href="./member/login.php"><strong>[로그인]</strong></a>
-      &nbsp; &nbsp; &nbsp;
-      <a href="./member/join.php"><strong>[회원가입]</strong></a>
+          <div class="mm">  <a href="./member/login.php"><strong>로그인</strong></a></div>
+
+      <div class="mm">  <a href="./member/join.php"><strong>회원가입</strong></a></div>
       <?}?>
-      &nbsp; &nbsp;
       <?if($member[user_id]){?>
-      <a href="./member/logout.php"><strong>[로그아웃]</strong></a>
+        <br>
+      <div class="mm"><a href="./member/logout.php"><strong>로그아웃</strong></a></div>
       <?}?>
       </td>
       <div class="mm"><a href="information_modify.html">정보수정</a></div>
@@ -68,6 +68,9 @@
       <!-- 이벤트 창 -->
       <div class="contentbox">
         이벤트
+        <br>
+        경북대학교 총 동창회
+
       </div>
 
       <div class="contentbox">
