@@ -26,7 +26,7 @@
     <!-- 왼쪽 메뉴 -->
     <div class="left_menu" style="display: none">
       <div class="left_menu_x">X</div>
-      <span><a href="index.html">HOME</span>
+      <span><a href="../index.php">HOME</span>
       <div class="mm"><a href="search_shop.html">가게검색</a></div>
       <div class="mm"><a href="classmate_meeting.html">동창모임</a></div>
       <div class="mm"><a href="meeting.html">모임생성&관리</a></div>
@@ -72,6 +72,10 @@
 <br><br>
 <li>연락처: <input type='text' name='tel' size='10'>
 <br><br>
+
+
+
+</script>
 <li>이메일: <input type='text' name='email' size='10'>
 <br><br>
 <li>초등학교: <input type='text' name='sch_1' size='15'>
