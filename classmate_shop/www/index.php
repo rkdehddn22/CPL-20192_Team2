@@ -68,8 +68,6 @@
       <!-- 이벤트 창 -->
       <div class="contentbox">
         이벤트
-        <br>
-        경북대학교 총 동창회
 
       </div>
 
